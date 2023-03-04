@@ -23,6 +23,14 @@ lot_summary <- total_summary <- suspension_samples  %>% group_by(Manufacturing_L
   sd = sd(PSI)
 )
 
-lot1 = subtset(suspension_samples, Manufacturing_Lot == 1)
-lot2 <- 
-lot3 <- 
+
+lot1 = subset(suspension_samples, Manufacturing_Lot==1)
+mean(lot1[['PSI']])
+
+
+lot2= subset(suspension_samples, Manufacturing_Lot==2)
+mean(lot2[['PSI']])
+
+
+t.test(lot1[['PSI']], lot2[['PSI']])
+
